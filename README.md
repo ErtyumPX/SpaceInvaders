@@ -2,7 +2,7 @@
 
 Space Invaders is an old arcade game from 1980s. In this project I tried to simulate that game.
 
-Deficiencies:
+Inefficiencies:
 
 - I used a one-dimensinol list to hold enemy invaders and it cost me unnecessarily much lines of code to detect an invader in a particular line. This should be recoded.
 
