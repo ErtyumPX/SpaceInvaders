@@ -12,4 +12,4 @@ Inefficiencies:
 
 - I didn't spent much time to clean the code. There might be a little bit mess.
 
-<p style:"text-align:center"> ![](Assets/README/SpaceInvaders.JPG) </p>
+![](Assets/README/SpaceInvaders.JPG)
