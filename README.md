@@ -11,3 +11,5 @@ Inefficiencies:
 - There is a bit problem with sounds. I was too lazy to make them work more decently.
 
 - I didn't spent much time to clean the code. There might be a little bit mess.
+
+![](images/Game.png)
