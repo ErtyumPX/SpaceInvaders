@@ -12,4 +12,4 @@ Inefficiencies:
 
 - I didn't spent much time to clean the code. There might be a little bit mess.
 
-![](Assets/README/Game.png)
+![](Assets/README/SpaceInvaders.JPG)
