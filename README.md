@@ -33,6 +33,7 @@ Plus, invaders does not shoot randomly but only if the user "protecter" are on t
 
 Pygame's itself does not support enhanced UI elements. The texts used in this game are from [PyGameEngine](https://github.com/ErtyumPX/PyGameEngine).
 
+<hr>
 
 ## Inefficiencies
 
