@@ -1,6 +1,6 @@
 # Space Invaders
 
-Litle prototype version of the old arcade game Space Invaders from 1980s, made with Python's Pygame.
+Little prototype version of the old arcade game Space Invaders from 1980s, made with Python's Pygame.
 
 ## License
 
@@ -8,20 +8,19 @@ This project is [MIT](https://github.com/ErtyumPX/SpaceInvaders/blob/main/LICENS
 
 ## Setup
 
-The python script "main.py" is the launcher of the game. After you clone or download the repository, you can simply double clikt that file.
+The python script "main.py" is the launcher of the game. After you clone or download the repository, you can simply double click that file.
 
-Beware that used Python version of this project is [3.8.3](https://www.python.org/downloads/release/python-383).
+Beware that used Python version of this project is [3.8.3](https://www.python.org/downloads/release/python-383) and the used Pygame version is [2.0.1](https://www.pygame.org/project/5409/7928).
 
 <img src="https://github.com/ErtyumPX/SpaceInvaders/blob/master/Assets/README/SpaceInvaders.JPG" width=50% height=50%>
 
 <hr>
 
-
 ## Mechanics & Algorithms
 
 ### Enemy Fleet Movement
 
-Invaders always acts coordinated with a certain speed. Every time they loose a fellow ship, they get faster.
+Invaders always acts coordinated with a certain speed. Every time they loose a fellow ship, they get faster. When they reach the end of the screen, they flip the movement to the other side.
 
 ### Enemy Attack
 
