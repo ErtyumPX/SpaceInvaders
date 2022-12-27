@@ -17,7 +17,17 @@ Beware that used Python version of this project is [3.8.3](https://www.python.or
 <hr>
 
 
-## Algorithms & Libraries
+## Mechanics & Algorithms
+
+### Enemy Fleet Movement
+
+Invaders always acts coordinated with a certain speed. Every time they loose a fellow ship, they get faster.
+
+### Enemy Attack
+
+The game starts with an 8x6 ship placed invaders fleet. Only the ships on the front line are allowed to attack, with a reasonable cooldown. Every time an invader in the front line is eliminated, the one on the back takes over.
+
+Plus, invaders does not shoot randomly but only if the user "protecter" are on their sight. If there is nobody in sight for some time, they start shooting randomly to limit user's movement.
 
 ### User Interface Elements
 
@@ -26,13 +36,9 @@ Pygame's itself does not support enhanced UI elements. The texts used in this ga
 
 ## Inefficiencies
 
-- I used a one-dimensinol list to hold enemy invaders and it cost me unnecessarily much lines of code to detect an invader in a particular line. This should be recoded.
+A one-dimensional array was used to hold invaders. This causes many lines of code when determining which invader is on the front line and which can attack. Yet this was more efficient for the movement mechanich.
 
-- I didn't make a replay function, after you died you need to rerun the script.
-
-- There is a bit problem with sounds. I was too lazy to make them work more decently.
-
-- I didn't spent much time to clean the code. There might be a little bit mess.
+Also there is a glitch with the sound effects at some certain scenerious, does not cause much problem yet it was hard to fix because sound system in Pygame is not the best.
 
 
 
