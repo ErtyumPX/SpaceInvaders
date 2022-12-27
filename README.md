@@ -36,7 +36,7 @@ Pygame's itself does not support enhanced UI elements. The texts used in this ga
 
 ## Inefficiencies
 
-A one-dimensional array was used to hold invaders. This causes many lines of code when determining which invader is on the front line and which can attack. Yet this was more efficient for the movement mechanich.
+A one-dimensional array was used to hold invaders. This causes many lines of code when determining which invader is on the front line and which can attack. Yet this was more efficient for the movement mechanic.
 
 Also there is a glitch with the sound effects at some certain scenerious, does not cause much problem yet it was hard to fix because sound system in Pygame is not the best.
 
