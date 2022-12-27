@@ -12,7 +12,7 @@ The python script "main.py" is the launcher of the game. After you clone or down
 
 Beware that used Python version of this project is [3.8.3](https://www.python.org/downloads/release/python-383).
 
-<img src="https://github.com/ErtyumPX/PacMan/blob/main/Assets/README/SpaceInvaders.JPG" width=100% height=100%>
+<img src="https://github.com/ErtyumPX/SpaceInvaders/tree/master/Assets/README/SpaceInvaders.JPG" width=100% height=100%>
 
 <hr>
 
