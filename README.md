@@ -19,7 +19,7 @@ Beware that used Python version of this project is [3.8.3](https://www.python.or
 
 ## Algorithms & Libraries
 
-### User Intercade Elements
+### User Interface Elements
 
 Pygame's itself does not support enhanced UI elements. The texts used in this game are from [PyGameEngine](https://github.com/ErtyumPX/PyGameEngine).
 
