@@ -40,5 +40,3 @@ A one-dimensional array was used to hold invaders. This causes many lines of cod
 
 Also there is a glitch with the sound effects at some certain scenerious, does not cause much problem yet it was hard to fix because sound system in Pygame is not the best.
 
-
-
