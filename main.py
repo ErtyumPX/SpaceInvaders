@@ -10,11 +10,10 @@ game_won_text.center(int(width/2), int(heigth/2))
 
 
 def initiate_game():
-	global main, game_over, waiting_for_restart, game_won, protector, enemyFleet
+	global main, game_over, game_won, protector, enemyFleet
 
 	main = True
 	game_over = False
-	waiting_for_restart = False
 	game_won = False
 
 	#to prevent shooting after pressing space or mousebutton1 to restart the game
@@ -46,7 +45,7 @@ while(main):
 	clock.tick(120)
 	surface.fill((0,0,0))
 
-	if waiting_for_restart:
+	if game_over:
 		waiting_for_button_text.update()
 
 	if game_won:
@@ -57,7 +56,7 @@ while(main):
 		if(event.type == pygame.QUIT):
 			main = False
 		elif (event.type == pygame.KEYDOWN):
-			if waiting_for_restart or game_won:
+			if game_over or game_won:
 				if event.key == pygame.K_r:
 					initiate_game()
 
@@ -94,7 +93,6 @@ while(main):
 		if(Collide(protector, bullet)):
 			bullet.Explode()
 			game_over = True
-			waiting_for_restart = True
 
 	for ship in enemyFleet.readyToFire:
 		if(ship.x < protector.x+protector.w/2 < ship.x+ship.w):
