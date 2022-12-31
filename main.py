@@ -2,15 +2,15 @@ from invaders import *
 from ui_elements import Text
 
 
-waiting_for_button_text = Text(surface, text="PRESS A BUTTON TO RESTART", font_size=16, color=(255, 255, 255))
+waiting_for_button_text = Text(surface, text='PRESS "R" TO RESTART', font_size=16, color=(255, 255, 255))
 waiting_for_button_text.center(int(width/2), int(heigth/2))
 
-game_won_text = Text(surface, text="GAME WON", font_size=36, color=(255, 255, 255))
+game_won_text = Text(surface, text='GAME WON! PRESS "R" TO RESTART', font_size=36, color=(255, 255, 255))
 game_won_text.center(int(width/2), int(heigth/2))
 
 
 def initiate_game():
-	global main, game_over, waiting_for_restart, game_won, do_not_shoot_this_frame, protector, enemyFleet
+	global main, game_over, waiting_for_restart, game_won, protector, enemyFleet
 
 	main = True
 	game_over = False
@@ -18,7 +18,6 @@ def initiate_game():
 	game_won = False
 
 	#to prevent shooting after pressing space or mousebutton1 to restart the game
-	do_not_shoot_this_frame = True 
 	
 	for bullet in bullets:
 		del bullet
@@ -59,15 +58,15 @@ while(main):
 			main = False
 		elif (event.type == pygame.KEYDOWN):
 			if waiting_for_restart or game_won:
-				initiate_game()
-		elif (event.type == pygame.MOUSEBUTTONDOWN):
-			if waiting_for_restart or game_won:
-				initiate_game()
+				if event.key == pygame.K_r:
+					initiate_game()
+
 
 	keys = pygame.key.get_pressed()
 	if(pygame.mouse.get_pressed()[0] or keys[pygame.K_SPACE]):
-		if not game_over and not game_won and not do_not_shoot_this_frame:
+		if not game_over and not game_won:
 			protector.Shoot()
+
 
 	for bullet in bullets:
 		if(not game_over):
@@ -115,9 +114,6 @@ while(main):
 			protector.Move(-1)
 			
 	enemyFleet.Show()
-
-	if do_not_shoot_this_frame == True:
-		do_not_shoot_this_frame = False
 
 	pygame.display.update()
 
