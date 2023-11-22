@@ -1,6 +1,15 @@
 import pygame, time, random
 from PIL import Image
 from glob import glob
+from sys import platform
+
+if platform == "linux" or platform == "linux2":
+    PATH_SEPERATOR = "/"
+elif platform == "win32":
+    PATH_SEPERATOR = "//"
+else: # not supported
+    raise Exception("FATAL: operating System is not supported!")
+
 
 pygame.init()
 width = 350
@@ -30,7 +39,9 @@ sounds = {}
 for filename in glob('./Assets/Sounds/*.wav'):
 	sound = pygame.mixer.Sound(filename)
 	sound.set_volume(0.2)
-	sounds[filename.split("\\")[1].split('.')[0]] = sound
+	print(filename)
+	sounds[filename.split(PATH_SEPERATOR)[-1].split('.')[0]] = sound
+
 
 def Collide(object1, bullet):
 	return (object1.x <= bullet.x <= object1.x + object1.w and object1.y <= bullet.y <= object1.y + object1.h)
